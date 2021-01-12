@@ -1,0 +1,351 @@
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%
+}
+
+.row {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: inherit;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'NanumGothic';
+    line-height: 1.5
+}
+
+#nav {
+    background: #85665c;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+}
+
+#nav .depth1 {
+    overflow: hidden;
+}
+
+#nav .depth1 li {
+    float:left;
+    width: 20%;
+    border-bottom: 2px solid transparent;
+    text-align: center;
+    color: #fff;
+}
+#nav .depth1 li a {
+    display: block;
+    padding:20px 0px;
+}
+
+#nav .depth1 li:hover {
+    border-bottom: 2px solid #fff;
+}
+
+#header {
+    background: url(../images/header_bg.gif) no-repeat center;
+    background-size: cover;
+    height: 600px;
+    position: relative;
+}
+
+.header_text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #333;
+}
+
+/* transtform:translate() 하면 
+   margin값 없이 가운데로  */
+
+.header_text h1 p {
+    font-size: 48px;
+    font-family: 'NanumMyeongjo';
+    padding: 20px 0px;
+}
+
+.header_text>p {
+    font-size: 22.4px;
+}
+
+/* 섹션 구역 */
+#section {
+    background: url(../images/bg.jpg) repeat;
+    position: relative;
+}
+
+#section>div {
+    padding: 48px 0px;
+}
+
+#section h2 {
+    font-size: 48px;
+    font-family: 'NanumMyeongjo';
+    color: #85665c;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#section>.article6 {
+    padding: 0px;
+}
+
+.article1 {
+    position: relative;
+}
+
+.main_food {
+    text-align: center;
+    margin-top: -188px;
+}
+
+.article1 ul {
+    display: table;
+    width: 100%;
+    color: #666;
+    text-align: center;
+}
+
+.article1 ul>li {
+    display: table-cell;
+    width: 25%;
+    padding: 0px 15px;
+}
+
+.article1 h3 {
+    font-size: 25.6px;
+    font-family: 'NanumMyeongjo';
+    color: #85665c;
+    padding: 50px 0px 15px;
+    line-height: 1.2;
+}
+
+.article1 ul>li img {
+    height: 97px;
+}
+
+.article2 {
+    text-align: center;
+}
+
+.article2 ul {
+    /* background: red; */
+    overflow: hidden;
+}
+
+/* 블록성격의 자식들을 한줄로 정렬하기 위해
+   float 속성을 사용하면 부모의 높이가
+   사라지는 부작용이 발생함 .
+   이것을 해결하기 위해 부모요소에 
+   overflow:hidden 속성을 줌. */
+
+.article2 ul li {
+    float: left;
+    width: 25%;
+    padding: 30px 20px;
+}
+
+.article3 {
+    text-align: center;
+}
+
+.article3 h3 {
+    line-height: 2em;
+    font-size: 16px;
+    font-family: 'NanumGodic';
+    columns: #666666;
+}
+
+.article3 img {
+    width: 110px;
+    margin:50px;
+}
+
+.article3 .name {
+    font-size: 28.8px;
+    font-family: 'NanumMyeongjo';
+    color: #404040;
+    margin:0px 0px 8px
+}
+
+.article3 .chef {
+    font-size: 16px;
+    font-family: 'NanumGodic';
+    color: #85665c;
+    padding: 20px 0px;
+}
+
+.article4 table {
+    margin-top: 20px;
+}
+
+
+.article4 td{
+    border-bottom:1px solid #85665c;
+    padding: 15px 0px;
+}
+
+.article4 td:nth-child(2) {
+    text-align:right;
+    font-size: 22.4px;
+}
+
+.article4 td:nth-child(1) strong{
+    font-size: 25.6px;
+    color: #85665c;
+    font-weight:normal;
+}
+
+.article4 tr:last-child td {
+    border-bottom: none;
+}
+
+.article4 .btn {
+    text-align: center;
+}
+
+.article4 .btn a {
+    display: inline-block;
+    width:175.2px;
+    height: 64px;
+    line-height:64px; 
+    border-radius: 50px;
+    background: #85665c;
+    color: #fff;
+    /* border:none;
+    cursor: pointer;
+    font-size: 16px;*/
+}
+
+#detail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* 
+    top:100%
+    left:100%
+    width:100%
+    height:100% */
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+    display: none;
+}
+#detail:target{
+    display: block;
+}
+
+.detailcont {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width:400px;
+    background: #fff;
+    color: #000;
+    padding: 20px;
+}
+
+.detailcont .close {
+    display: block;
+    width: 80px;
+    background: red;
+    color: #fff;
+    padding: 10px 0px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 130px;
+}
+
+.article5 {
+    overflow: hidden;
+}
+.article5 .info {
+   float:left;
+    width:50%;
+    margin-top: 20px;
+}
+
+.article5 .info pre {
+    font-family: inherit;
+}
+
+.article5 .map {
+   float:right;
+    width:50%;
+    margin-top: 20px;
+}
+
+.article6 {
+    background:#85665c;
+    color:#f4ba82;
+    font-size: 32px;
+    font-family: 'NanumMyeongjo';
+    text-align: center;
+}
+
+.article6 a {
+    color:#fff;
+    padding-left: 20px;
+}
+
+.article6 img {
+    width:100%;
+}
+
+.article6 div {
+    padding:45px 0px;
+}
+
+#footer {
+    background: #85665c;
+    color: #fff;
+    font-family: 'NanumMyeongjo';
+    text-align: center;
+    padding: 61px 0px;
+}
+
+.gotop {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+}
